@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "backend": "cd airline-backend && nest build && nest start",
+    "frontend": "cd airline-frontend && ng serve",
+    "serve": "concurrently \"npm run backend\" \"npm run frontend\""
+  },
+  "dependencies": {
+    "@angular/cli": "^15.0.5",
+    "concurrently": "^7.6.0"
+  }
+}
