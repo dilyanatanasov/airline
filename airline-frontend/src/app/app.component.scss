@@ -1,0 +1,34 @@
+header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+  h1 {
+    font-family: "Montserrat", Sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      color: black;
+    }
+  }
+}
+
+aside {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+

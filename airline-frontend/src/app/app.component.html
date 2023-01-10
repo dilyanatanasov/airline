@@ -1,1 +1,25 @@
-<h1>{{ flight }}</h1>
+<header>
+  <h1>{{ pageContent.websiteTitle }}</h1>
+</header>
+<main>
+  <form [formGroup]="flightSearch">
+    <label>From Airport:</label>
+    <select formControlName="fromAirport">
+      <option value="" disabled selected hidden>Where do we start</option>
+      <option *ngFor="let airport of airports" [ngValue]="airport.id">{{ airport.name }}</option>
+    </select>
+    <label>To Airport:</label>
+    <select formControlName="toAirport">
+      <option value="" disabled selected hidden>Where do we end</option>
+      <option *ngFor="let airport of toAirport" [ngValue]="airport.id">{{ airport.name }}</option>
+    </select>
+    <label>From Date:</label>
+    <input type="date" formControlName="fromDate">
+    <label>To Date:</label>
+    <input type="date" formControlName="toDate" placeholder="Where do we end">
+    <input type="submit" (click)="getFlights()" value="Get Flights">
+  </form>
+</main>
+<aside>
+  <h2>Test</h2>
+</aside>
